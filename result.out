@@ -1,0 +1,135 @@
+gcc -c bubble.c
+gcc -c heap.c
+gcc -c insertion.c
+gcc -c quick.c
+gcc -c selection.c
+gcc -c shell.c
+gcc -c main.c
+gcc main.o bubble.o heap.o insertion.o quick.o selection.o shell.o -o main
+cls
+main input\input.50m.in insertion 
+
+Method: insertion
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 2.255000
+status: OK
+main input\input.50m.in selection 
+
+Method: selection
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 4.479000
+status: OK
+main input\input.50m.in bubble 
+
+Method: bubble
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 13.532000
+status: OK
+main input\input.50m.in shell 
+
+Method: shell
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 0.004000
+status: OK
+main input\input.50m.in heap 
+
+Method: heap
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 0.000000
+status: OK
+main input\input.50m.in quick 
+
+Method: quick
+Dataset: input\input.50m.in
+Dataset Size: 50000
+Total time taken by CPU: 0.014000
+status: OK
+main input\input.100m.in insertion 
+
+Method: insertion
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 9.176000
+status: OK
+main input\input.100m.in selection 
+
+Method: selection
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 17.878000
+status: OK
+main input\input.100m.in bubble 
+
+Method: bubble
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 54.873000
+status: OK
+main input\input.100m.in shell 
+
+Method: shell
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 0.020000
+status: OK
+main input\input.100m.in heap 
+
+Method: heap
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 0.028000
+status: OK
+main input\input.100m.in quick 
+
+Method: quick
+Dataset: input\input.100m.in
+Dataset Size: 100000
+Total time taken by CPU: 0.036000
+status: OK
+main input\input.200m.in insertion 
+
+Method: insertion
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 36.159000
+status: OK
+main input\input.200m.in selection 
+
+Method: selection
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 70.489000
+status: OK
+main input\input.200m.in bubble 
+
+Method: bubble
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 212.203000
+status: OK
+main input\input.200m.in shell 
+
+Method: shell
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 0.088000
+status: OK
+main input\input.200m.in heap 
+
+Method: heap
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 0.056000
+status: OK
+main input\input.200m.in quick 
+
+Method: quick
+Dataset: input\input.200m.in
+Dataset Size: 200000
+Total time taken by CPU: 0.112000
+status: OK
