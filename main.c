@@ -2,42 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-float run(int option)
-{
-	FILE *console_return;
-	float duration;
-
-	if (option == 2)
-	{
-		console_return = popen("sorter temp.in bubble.out bubble", "r");
-	}
-	else if (option == 3)
-	{
-		console_return = popen("sorter temp.in quick.out quick", "r");
-	}
-	else if (option == 4)
-	{
-		console_return = popen("sorter temp.in insertion.out insertion", "r");
-	}
-	else if (option == 5)
-	{
-		console_return = popen("sorter temp.in selection.out selection", "r");
-	}
-	else if (option == 6)
-	{
-		console_return = popen("sorter temp.in shell.out shell", "r");
-	}
-	else
-	{
-		console_return = popen("sorter temp.in heap.out heap", "r");
-	}
-
-	fscanf(console_return, "%f", &duration);
-	pclose(console_return);
-
-	return duration;
-}
-
 void show(char *fileName)
 {
 	FILE *input_file = fopen(fileName, "r");
@@ -50,6 +14,49 @@ void show(char *fileName)
 
 	fclose(input_file);
 }
+
+float run(int option)
+{
+	FILE *console_return;
+	float duration;
+	
+	printf("raw: ");
+	show("temp.in");
+	printf("\n");
+
+	if (option == 2)
+	{
+		console_return = popen("sorter temp.in temp.out bubble", "r");
+	}
+	else if (option == 3)
+	{
+		console_return = popen("sorter temp.in temp.out quick", "r");
+	}
+	else if (option == 4)
+	{
+		console_return = popen("sorter temp.in temp.out insertion", "r");
+	}
+	else if (option == 5)
+	{
+		console_return = popen("sorter temp.in temp.out selection", "r");
+	}
+	else if (option == 6)
+	{
+		console_return = popen("sorter temp.in temp.out shell", "r");
+	}
+	else
+	{
+		console_return = popen("sorter temp.in temp.out heap", "r");
+	}
+	printf("sorted: ");
+	show("temp.out");
+
+	fscanf(console_return, "%f", &duration);
+	pclose(console_return);
+
+	return duration;
+}
+
 int main()
 {
 
@@ -102,12 +109,12 @@ int main()
 			printf("Time Spent %f (s)", run(option));
 			break;
 		case 8:
-			printf("\nbubble: %f (s)", run(2));
-			printf("\nquick: %f (s)", run(3));
-			printf("\ninsertion: %f (s)", run(4));
-			printf("\nselection: %f (s)", run(5));
-			printf("\nshell: %f (s)", run(6));
-			printf("\nheap: %f (s)", run(7));
+			printf("\nbubble: %f (s)\n", run(2));
+			printf("\nquick: %f (s)\n", run(3));
+			printf("\ninsertion: %f (s)\n", run(4));
+			printf("\nselection: %f (s)\n", run(5));
+			printf("\nshell: %f (s)\n", run(6));
+			printf("\nheap: %f (s)\n", run(7));
 			break;
 		case 9:
 			return 0;
